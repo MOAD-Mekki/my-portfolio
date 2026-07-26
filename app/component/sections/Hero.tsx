@@ -94,10 +94,10 @@ export default function Hero() {
           {/* Secondary button: downloads the CV file */}
           {/* variant="outline" = bordered button, no fill
               "download" attribute on <a> triggers a file download */}
-          <Button size="lg" variant="outline" >
-            <a href={personalInfo.cv} download>
+          <Button size="lg" variant="outline">
+            <a href={personalInfo.cv} download className="flex justify-around">
               <Download className="mr-2 h-4 w-4" />
-              Download CV
+              CV
             </a>
           </Button>
 

@@ -28,8 +28,8 @@ import { personalInfo } from "../../../data/portfolio"
 // Edit these 4 objects to match your own information.
 const highlights = [
   { icon: MapPin,         label: "Location",  value: personalInfo.location   },
-  { icon: GraduationCap, label: "Education", value: "Telecom Engineering"    },
-  { icon: Code2,          label: "Focus",     value: "Frontend & Full-stack"  },
+  { icon: GraduationCap, label: "Education", value: "Higher National School Of Telecommunications and ICT"    },
+  { icon: Code2,          label: "Focus",     value: "Full-stack Web Development"  },
   { icon: Coffee,         label: "Status",    value: "Open to work"           },
 ]
 

@@ -90,7 +90,7 @@ export default function Footer() {
 
         {/* ── COPYRIGHT ────────────────────────────────────────── */}
         <p className="text-center text-sm text-muted-foreground">
-          © 2026 {personalInfo.name}. Built with Next.js, Tailwind CSS & shadcn/ui
+          © 2026 {personalInfo.name}.
         </p>
 
       </div>

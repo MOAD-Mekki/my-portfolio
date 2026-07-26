@@ -77,8 +77,6 @@ export default function Navbar() {
         {/* ── LOGO (left side) ───────────────────────────────── */}
         <Link href="/" className="font-bold text-xl">
           {personalInfo.name}
-          {/* The dot after the name in the primary (accent) color */}
-          <span className="text-primary">.</span>
         </Link>
 
         {/* ── DESKTOP LINKS (center) ─────────────────────────── */}
