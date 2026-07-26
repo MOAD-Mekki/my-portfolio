@@ -38,12 +38,14 @@ import { Mail, MapPin } from "lucide-react"
 import { FaGithub, FaLinkedin } from "react-icons/fa"
 import SectionTitle from "../shared/Sectiontitle"
 import { personalInfo } from "../../../data/portfolio"
+import emailjs from 'emailjs-com'
 
 export default function Contact() {
 
   // ── FORM STATE ───────────────────────────────────────────────
   // "form" holds the current value of each input field.
   // When the user types, we update the matching key here.
+  emailjs.init('OSLo6dSf0YLVnRIjb')
   const [form, setForm] = useState({
     name: "",
     email: "",
@@ -95,13 +97,23 @@ export default function Contact() {
   //        "YOUR_PUBLIC_KEY"     // from EmailJS dashboard
   //      )
   //
-  async function handleSubmit() {
+  async function handleSubmit(
+    e: React.MouseEvent<HTMLButtonElement>
+  ) {
+    e.preventDefault();
     setStatus("sending")
+    try {
+      await emailjs.send('service_vr1fabu', 'template_7keuglj', {
+        name: form.name,
+        message: form.message,
+        reply_to: form.email
+      })
 
-    // Remove this block after you add real EmailJS code above
-    await new Promise((resolve) => setTimeout(resolve, 1000))
+      setStatus("sent");
+    } catch(err) {
+      console.log(err);
+    }
 
-    setStatus("sent")
   }
 
   return (
@@ -184,8 +196,7 @@ export default function Contact() {
 
                 // SUCCESS STATE
                 <div className="text-center py-8 space-y-2">
-                  <p className="text-3xl">✅</p>
-                  <p className="font-medium">Message sent!</p>
+                  <p className="font-medium">Message sent !</p>
                   <p className="text-sm text-muted-foreground">
                     I'll get back to you soon.
                   </p>
