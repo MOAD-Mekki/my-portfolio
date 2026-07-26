@@ -19,7 +19,6 @@
 //   AvatarFallback  → shown if the photo file is missing
 // ─────────────────────────────────────────────────────────────────
 
-import { Badge } from "../../../components/ui/badge"
 import { Button } from "../../../components/ui/button"
 import { Avatar, AvatarFallback, AvatarImage } from "../../../components/ui/avatar"
 import { Download, ArrowDown } from "lucide-react"
@@ -97,7 +96,7 @@ export default function Hero() {
           <Button size="lg" variant="outline">
             <a href={personalInfo.cv} download className="flex justify-around">
               <Download className="mr-2 h-4 w-4" />
-              CV
+              Download CV
             </a>
           </Button>
 

@@ -12,7 +12,7 @@ export const personalInfo = {
 
 // Skills Section
 export const skills = {
-  frontend: [
+  tech: [
     "HTML",
     "CSS",
     "Tailwind CSS",

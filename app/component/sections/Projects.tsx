@@ -100,7 +100,7 @@ export default function Projects() {
                           This keeps all cards the same height in a row. */}
               <CardContent className="pt-4 flex-1 space-y-3">
 
-                <CardTitle className="text-lg">
+                <CardTitle className="text-lg ">
                   {project.name}
                 </CardTitle>
 

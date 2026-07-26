@@ -45,7 +45,7 @@ const navLinks = [
 
 export default function Navbar() {
   // useTheme gives us the current theme ("dark"/"light") and a setter
-  const { theme, setTheme } = useTheme()
+  const { theme, setTheme } = useTheme();
 
   // ── WHY mounted? ─────────────────────────────────────────────
   // When Next.js first renders the page on the server, it doesn't
@@ -75,7 +75,7 @@ export default function Navbar() {
       <div className="max-w-6xl mx-auto px-4 h-16 flex items-center justify-between">
 
         {/* ── LOGO (left side) ───────────────────────────────── */}
-        <Link href="/" className="font-bold text-xl">
+        <Link href="/" className="font-bold text-xl md:text-2xl">
           {personalInfo.name}
         </Link>
 
@@ -146,10 +146,11 @@ export default function Navbar() {
                 ))}
 
                 {/* Hire me button inside the mobile drawer */}
-                <Button  className="mt-4">
-                  <a href="#contact">Hire me</a>
-                </Button>
-
+                <SheetClose >
+                  <Button  className="mt-4 w-full">
+                    <a href="#contact">Hire me</a>
+                  </Button>
+                </SheetClose>
               </div>
             </SheetContent>
           </Sheet>

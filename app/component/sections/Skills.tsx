@@ -2,7 +2,7 @@
 // src/components/sections/Skills.tsx
 //
 // Displays your skills in 3 clickable tabs:
-//   Tab 1 "Frontend"  → your frontend technologies
+//   Tab 1 "tech"  → your tech technologies
 //   Tab 2 "Tools"     → tools and platforms you use
 //   Tab 3 "Learning"  → what you're currently studying
 //
@@ -52,7 +52,7 @@ export default function Skills() {
         {/* defaultValue → the tab that is open when the page first loads.
             It must match one of the TabsTrigger "value" props below.
             max-w-2xl mx-auto → limits width and centers the whole tabs block */}
-        <Tabs defaultValue="frontend" className="max-w-2xl mx-auto">
+        <Tabs defaultValue="tech" className="max-w-2xl mx-auto">
 
           {/* ── TAB BUTTONS ROW ────────────────────────────────── */}
           {/* TabsList wraps all the tab buttons together
@@ -63,7 +63,7 @@ export default function Skills() {
             {/* Each TabsTrigger is one tab button.
                 The "value" prop connects it to its TabsContent panel below.
                 When clicked, it shows the TabsContent with the same value. */}
-            <TabsTrigger value="frontend">Frontend</TabsTrigger>
+            <TabsTrigger value="tech">Tech Stack</TabsTrigger>
             <TabsTrigger value="tools">Tools</TabsTrigger>
             <TabsTrigger value="learning">Learning</TabsTrigger>
 
@@ -72,16 +72,16 @@ export default function Skills() {
           {/* ── TAB CONTENT PANELS ────────────────────────────── */}
           {/*
               Object.entries(skills) converts the skills object from:
-                { frontend: ["React", ...], tools: ["Git", ...] }
+                { tech: ["React", ...], tools: ["Git", ...] }
               into an array we can loop over:
-                [["frontend", ["React", ...]], ["tools", ["Git", ...]]]
+                [["tech", ["React", ...]], ["tools", ["Git", ...]]]
 
               This means we don't need to write a separate TabsContent
               for each category — we just loop over the skills data.
           */}
           {Object.entries(skills).map(([category, items]) => (
             // "value" here MUST match the value on the TabsTrigger above.
-            // Example: value="frontend" connects to <TabsTrigger value="frontend">
+            // Example: value="tech" connects to <TabsTrigger value="tech">
             // If they don't match, clicking the tab won't show this panel.
             <TabsContent key={category} value={category}>
 
@@ -97,7 +97,7 @@ export default function Skills() {
                       // px-4 py-2 → more horizontal and vertical padding than default
                       <Badge
                         key={skill}
-                        variant="secondary"
+                        variant="outline"
                         className="px-4 py-2 text-sm font-medium"
                       >
                         {skill}

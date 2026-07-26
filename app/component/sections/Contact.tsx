@@ -34,6 +34,7 @@ import {
 import { Button } from "../../../components/ui/button"
 import { Input } from "../../../components/ui/input"
 import { Textarea } from "../../../components/ui/textarea"
+import { Spinner } from "@/components/ui/spinner"
 import { Mail, MapPin } from "lucide-react"
 import { FaGithub, FaLinkedin } from "react-icons/fa"
 import SectionTitle from "../shared/Sectiontitle"
@@ -241,7 +242,9 @@ export default function Contact() {
                     onClick={handleSubmit}
                     disabled={status === "sending"}
                   >
-                    {status === "sending" ? "Sending..." : "Send message"}
+                    {status === "sending"  
+                      ? <> <Spinner data-icon="inline-start" /> Sending </> 
+                      : "Send message"}
                   </Button>
                 </>
 
