@@ -46,7 +46,7 @@ export default function Hero() {
 
           {/* AvatarImage: tries to load your photo from /public/me.jpg
               Put your photo at public/me.jpg to make it show */}
-          <AvatarImage src="/me.jpg" alt={personalInfo.name} />
+          <AvatarImage src="/images/me.jpg" alt={personalInfo.name} />
 
           {/* AvatarFallback: shown if the photo fails to load.
               Change "MK" to your own initials */}
