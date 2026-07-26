@@ -65,7 +65,7 @@ export default function About() {
               {/* Put your photo at public/about.jpg
                   object-cover → fills the square without stretching the image */}
               <img
-                src="/about.jpg"
+                src="/me.jpg"
                 alt="Mekki"
                 className="w-full h-full object-cover"
               />
