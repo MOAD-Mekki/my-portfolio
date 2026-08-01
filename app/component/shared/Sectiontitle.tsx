@@ -17,8 +17,6 @@ export default function SectionTitle({ title, subtitle }: SectionTitleProps) {
         {subtitle}
       </p>
 
-      <div className="mt-4 h-1 w-16 bg-primary rounded mx-auto" />
-
     </div>
   )
 }

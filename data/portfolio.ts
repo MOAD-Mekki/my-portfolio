@@ -31,11 +31,6 @@ export const skills = {
     "Huawei eNSP",
     "VRP",
   ],
-  learning: [
-    "Node.js",
-    "Express.js",
-    "Docker",
-  ],
 }
 
 // Projects Section
